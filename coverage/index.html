@@ -14,14 +14,14 @@
       <img src="./assets/0.10.2/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2021-10-10T18:50:58-04:00">2021-10-10T18:50:58-04:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2021-10-10T21:57:53-04:00">2021-10-10T21:57:53-04:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="red">72.0%</span></span>
+    (<span class="covered_percent"><span class="red">71.05%</span></span>
      covered at
      <span class="covered_strength">
        <span class="green">
@@ -32,9 +32,9 @@
   <a name="AllFiles"></a>
   <div>
     <b>2</b> files in total.
-    <b>75</b> relevant lines. 
+    <b>76</b> relevant lines. 
     <span class="green"><b>54</b> lines covered</span> and
-    <span class="red"><b>21</b> lines missed </span>
+    <span class="red"><b>22</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -52,18 +52,18 @@
       
       <tr>
         <td class="strong"><a href="#ac1ea1392f9b48c0c422dc72ea09e5db6d44aa92" class="src_link" title="app.rb">app.rb</a></td>
-        <td class="red strong">77.78 %</td>
-        <td>76</td>
-        <td>36</td>
+        <td class="red strong">75.68 %</td>
+        <td>80</td>
+        <td>37</td>
         <td>28</td>
-        <td>8</td>
+        <td>9</td>
         <td>1.3</td>
       </tr>
       
       <tr>
         <td class="strong"><a href="#41968ba6249f17c944119de1a7ee66cf2521fe85" class="src_link" title="lib/wordguesser_game.rb">lib/wordguesser_game.rb</a></td>
         <td class="red strong">66.67 %</td>
-        <td>80</td>
+        <td>81</td>
         <td>39</td>
         <td>26</td>
         <td>13</td>
@@ -89,11 +89,11 @@
         <div class="source_table" id="ac1ea1392f9b48c0c422dc72ea09e5db6d44aa92">
   <div class="header">
     <h3>app.rb</h3>
-    <h4><span class="red">77.78 %</span> covered</h4>
+    <h4><span class="red">75.68 %</span> covered</h4>
     <div>
-      <b>36</b> relevant lines. 
+      <b>37</b> relevant lines. 
       <span class="green"><b>28</b> lines covered</span> and
-      <span class="red"><b>8</b> lines missed.</span>
+      <span class="red"><b>9</b> lines missed.</span>
     </div>
   </div>
   
@@ -352,205 +352,229 @@
           <code class="ruby">    ### YOUR CODE HERE ###</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="43">
+        <li class="never" data-hits="" data-linenumber="43">
           
           
-          <code class="ruby">    if(!@game.guess(letter))</code>
+          <code class="ruby">    begin</code>
         </li>
       
         <li class="missed" data-hits="0" data-linenumber="44">
           
           
+          <code class="ruby">    if(!@game.guess(letter))</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="45">
+          
+          
           <code class="ruby">      flash[:message] = &quot;You have already used that letter.&quot;</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="45">
+        <li class="never" data-hits="" data-linenumber="46">
           
           
           <code class="ruby">    end</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="46">
-          
-          
-          <code class="ruby">    redirect &#39;/show&#39;</code>
-        </li>
-      
         <li class="never" data-hits="" data-linenumber="47">
           
           
-          <code class="ruby">  end</code>
+          <code class="ruby">  rescue ArgumentError =&gt; e</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="48">
+        <li class="missed" data-hits="0" data-linenumber="48">
           
           
-          <code class="ruby">  </code>
+          <code class="ruby">    flash[:message] = &quot;Invalid guess.&quot;</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="49">
           
           
-          <code class="ruby">  # Everytime a guess is made, we should eventually end up at this route.</code>
+          <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="50">
+        <li class="missed" data-hits="0" data-linenumber="50">
           
           
-          <code class="ruby">  # Use existing methods in WordGuesserGame to check if player has</code>
+          <code class="ruby">    redirect &#39;/show&#39;</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="51">
           
           
-          <code class="ruby">  # won, lost, or neither, and take the appropriate action.</code>
+          <code class="ruby">  end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="52">
           
           
-          <code class="ruby">  # Notice that the show.erb template expects to use the instance variables</code>
+          <code class="ruby">  </code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="53">
           
           
-          <code class="ruby">  # wrong_guesses and word_with_guesses from @game.</code>
+          <code class="ruby">  # Everytime a guess is made, we should eventually end up at this route.</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="54">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="54">
           
-          <code class="ruby">  get &#39;/show&#39; do</code>
+          
+          <code class="ruby">  # Use existing methods in WordGuesserGame to check if player has</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="55">
           
           
+          <code class="ruby">  # won, lost, or neither, and take the appropriate action.</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="56">
+          
+          
+          <code class="ruby">  # Notice that the show.erb template expects to use the instance variables</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="57">
+          
+          
+          <code class="ruby">  # wrong_guesses and word_with_guesses from @game.</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="58">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  get &#39;/show&#39; do</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="59">
+          
+          
           <code class="ruby">    ### YOUR CODE HERE ###</code>
-        </li>
-      
-        <li class="covered" data-hits="2" data-linenumber="56">
-          <span class="hits">2</span>
-          
-          <code class="ruby">    status = @game.check_win_or_lose</code>
-        </li>
-      
-        <li class="covered" data-hits="2" data-linenumber="57">
-          <span class="hits">2</span>
-          
-          <code class="ruby">    redirect &quot;/win&quot; if status == :win</code>
-        </li>
-      
-        <li class="covered" data-hits="2" data-linenumber="58">
-          <span class="hits">2</span>
-          
-          <code class="ruby">	  redirect &quot;/lose&quot; if status == :lose		</code>
-        </li>
-      
-        <li class="covered" data-hits="2" data-linenumber="59">
-          <span class="hits">2</span>
-          
-          <code class="ruby">	  @wrong_guesses = @game.wrong_guesses</code>
         </li>
       
         <li class="covered" data-hits="2" data-linenumber="60">
           <span class="hits">2</span>
           
-          <code class="ruby">	  @word_with_guesses = @game.word_with_guesses</code>
+          <code class="ruby">    status = @game.check_win_or_lose</code>
         </li>
       
         <li class="covered" data-hits="2" data-linenumber="61">
           <span class="hits">2</span>
           
+          <code class="ruby">    redirect &quot;/win&quot; if status == :win</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="62">
+          <span class="hits">2</span>
+          
+          <code class="ruby">	  redirect &quot;/lose&quot; if status == :lose		</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="63">
+          <span class="hits">2</span>
+          
+          <code class="ruby">	  @wrong_guesses = @game.wrong_guesses</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="64">
+          <span class="hits">2</span>
+          
+          <code class="ruby">	  @word_with_guesses = @game.word_with_guesses</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="65">
+          <span class="hits">2</span>
+          
           <code class="ruby">    erb :show # You may change/remove this line</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="62">
+        <li class="never" data-hits="" data-linenumber="66">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="63">
+        <li class="never" data-hits="" data-linenumber="67">
           
           
           <code class="ruby">  </code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="64">
+        <li class="covered" data-hits="1" data-linenumber="68">
           <span class="hits">1</span>
           
           <code class="ruby">  get &#39;/win&#39; do</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="65">
+        <li class="never" data-hits="" data-linenumber="69">
           
           
           <code class="ruby">    ### YOUR CODE HERE ###</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="66">
+        <li class="missed" data-hits="0" data-linenumber="70">
           
           
           <code class="ruby">    redirect &#39;/show&#39; if (@game.check_win_or_lose != :win) </code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="67">
+        <li class="missed" data-hits="0" data-linenumber="71">
           
           
           <code class="ruby">    erb :win # You may change/remove this line</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="68">
+        <li class="never" data-hits="" data-linenumber="72">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="69">
+        <li class="never" data-hits="" data-linenumber="73">
           
           
           <code class="ruby">  </code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="70">
+        <li class="covered" data-hits="1" data-linenumber="74">
           <span class="hits">1</span>
           
           <code class="ruby">  get &#39;/lose&#39; do</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="71">
+        <li class="never" data-hits="" data-linenumber="75">
           
           
           <code class="ruby">    ### YOUR CODE HERE ###</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="72">
+        <li class="missed" data-hits="0" data-linenumber="76">
           
           
           <code class="ruby">    redirect &#39;/show&#39; if (@game.check_win_or_lose != :lose) </code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="73">
+        <li class="missed" data-hits="0" data-linenumber="77">
           
           
           <code class="ruby">    erb :lose # You may change/remove this line</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="74">
+        <li class="never" data-hits="" data-linenumber="78">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="75">
+        <li class="never" data-hits="" data-linenumber="79">
           
           
           <code class="ruby">  </code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="76">
+        <li class="never" data-hits="" data-linenumber="80">
           
           
           <code class="ruby">end</code>
@@ -881,175 +905,181 @@
           <code class="ruby">  def guess(letter)</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="52">
+        <li class="never" data-hits="" data-linenumber="52">
+          
+          
+          <code class="ruby">    </code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="53">
           
           
           <code class="ruby">    letter = letter.downcase if(letter != nil)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="53">
+        <li class="never" data-hits="" data-linenumber="54">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="54">
+        <li class="missed" data-hits="0" data-linenumber="55">
           
           
           <code class="ruby">    raise ArgumentError.new(&quot;Not a valid letter&quot;) if (letter.nil? or /[^A-Za-z]/.match(letter) != nil or letter == &#39;&#39;)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="55">
+        <li class="never" data-hits="" data-linenumber="56">
           
           
           <code class="ruby">    </code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="56">
+        <li class="missed" data-hits="0" data-linenumber="57">
           
           
           <code class="ruby">    return false if (@guesses.include? letter or @wrong_guesses.include? letter)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="57">
+        <li class="never" data-hits="" data-linenumber="58">
           
           
           <code class="ruby">    </code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="58">
-          
-          
-          <code class="ruby">    if @word.include? letter</code>
         </li>
       
         <li class="missed" data-hits="0" data-linenumber="59">
           
           
-          <code class="ruby">      @guesses += letter</code>
+          <code class="ruby">    if @word.include? letter</code>
         </li>
       
         <li class="missed" data-hits="0" data-linenumber="60">
           
           
+          <code class="ruby">      @guesses += letter</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="61">
+          
+          
           <code class="ruby">      return true</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="61">
+        <li class="never" data-hits="" data-linenumber="62">
           
           
           <code class="ruby">    else</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="62">
+        <li class="missed" data-hits="0" data-linenumber="63">
           
           
           <code class="ruby">      @wrong_guesses += letter</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="63">
+        <li class="missed" data-hits="0" data-linenumber="64">
           
           
           <code class="ruby">      return true</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="64">
+        <li class="never" data-hits="" data-linenumber="65">
           
           
           <code class="ruby">    end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="65">
+        <li class="never" data-hits="" data-linenumber="66">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="66">
+        <li class="never" data-hits="" data-linenumber="67">
           
           
           <code class="ruby">    </code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="67">
+        <li class="covered" data-hits="1" data-linenumber="68">
           <span class="hits">1</span>
           
           <code class="ruby">  def word_with_guesses</code>
         </li>
       
-        <li class="covered" data-hits="6" data-linenumber="68">
+        <li class="covered" data-hits="6" data-linenumber="69">
           <span class="hits">6</span>
           
           <code class="ruby">    t=@guesses</code>
         </li>
       
-        <li class="covered" data-hits="6" data-linenumber="69">
+        <li class="covered" data-hits="6" data-linenumber="70">
           <span class="hits">6</span>
           
           <code class="ruby">    return @word.gsub(/[^ #{t}]/, &#39;-&#39;)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="70">
+        <li class="never" data-hits="" data-linenumber="71">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="71">
+        <li class="never" data-hits="" data-linenumber="72">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="72">
+        <li class="covered" data-hits="1" data-linenumber="73">
           <span class="hits">1</span>
           
           <code class="ruby">  def check_win_or_lose</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="73">
+        <li class="covered" data-hits="2" data-linenumber="74">
           <span class="hits">2</span>
           
           <code class="ruby">    return :lose if (@wrong_guesses.length &gt;= 7)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="74">
+        <li class="never" data-hits="" data-linenumber="75">
           
           
           <code class="ruby">  </code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="75">
+        <li class="covered" data-hits="2" data-linenumber="76">
           <span class="hits">2</span>
           
           <code class="ruby">    return :win if (word_with_guesses == @word)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="76">
+        <li class="never" data-hits="" data-linenumber="77">
           
           
           <code class="ruby">    </code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="77">
+        <li class="covered" data-hits="2" data-linenumber="78">
           <span class="hits">2</span>
           
           <code class="ruby">    return :play</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="78">
+        <li class="never" data-hits="" data-linenumber="79">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="79">
+        <li class="never" data-hits="" data-linenumber="80">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="80">
+        <li class="never" data-hits="" data-linenumber="81">
           
           
           <code class="ruby">end</code>

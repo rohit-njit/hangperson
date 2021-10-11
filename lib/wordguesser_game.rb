@@ -49,12 +49,7 @@ class WordGuesserGame
   end
 
   def guess(letter)
-    # begin
-    #   letter = letter.downcase if(letter != nil)
-    #   raise ArgumentError.new("Not a valid letter") if (letter.nil? or /[^A-Za-z]/.match(letter) != nil or letter == '')
-    # rescue ArgumentError
-    #   return false
-    # end
+    
     letter = letter.downcase if(letter != nil)
 
     raise ArgumentError.new("Not a valid letter") if (letter.nil? or /[^A-Za-z]/.match(letter) != nil or letter == '')
